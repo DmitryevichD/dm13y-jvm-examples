@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+ext {
+    lombokVersion = '1.18.20'
+    cglibVersion = '3.3.0'
+    slf4jVersion = '1.7.32'
+}
+
+group 'org.dm13y'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    implementation "cglib:cglib:$cglibVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

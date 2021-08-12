@@ -1,2 +1,3 @@
 rootProject.name = 'dm13y'
+include 'proxy-vs-cglib'
 
