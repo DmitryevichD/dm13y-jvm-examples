@@ -1,3 +1,7 @@
-test-case:
-  in:
-    environments: envVariables
+env:
+  cebab-case:
+    variable-case: cebab-case
+  camel-case:
+    variableCase: camelCase
+  snake-case:
+    variabile_case: snake_case
